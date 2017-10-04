@@ -15,7 +15,7 @@ class BandsModel : BaseModel(), IBandsModel {
 
     var mData: ArrayList<Band> = ArrayList()
 
-    override fun requestShowcaseList(callback: IBaseCallback<List<Band>>) {
+    override fun requestBandsList(callback: IBaseCallback<List<Band>>) {
         //Code below is to pretend some data is being requested.
         val disposable = Single.fromCallable({
 
@@ -39,7 +39,7 @@ class BandsModel : BaseModel(), IBandsModel {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ N ->
                     if (N > 5) {
-                        callback.onSuccess(showcaseList())
+                        callback.onSuccess(bandsList())
                     } else {
                         callback.onFail("An error has occured.")
                     }
@@ -50,7 +50,7 @@ class BandsModel : BaseModel(), IBandsModel {
 
     }
 
-    override fun showcaseList(): List<Band> {
+    override fun bandsList(): List<Band> {
         return mData
     }
 

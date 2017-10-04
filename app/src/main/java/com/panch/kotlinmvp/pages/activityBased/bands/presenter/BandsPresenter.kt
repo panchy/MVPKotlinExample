@@ -15,15 +15,15 @@ class BandsPresenter(bandsView: IBandsView) : IBandsPresenter() {
     private var mBandsModel: IBandsModel = BandsModel()
     private var mBandsView: IBandsView = bandsView
 
-    override fun showcaseList(): List<Band> {
-        return mBandsModel.showcaseList()
+    override fun bandsList(): List<Band> {
+        return mBandsModel.bandsList()
     }
 
 
     override fun initViewData() {
         mBandsView.hideError()
         mBandsView.showLoading()
-        mBandsModel.requestShowcaseList(object : IBaseCallback<List<Band>> {
+        mBandsModel.requestBandsList(object : IBaseCallback<List<Band>> {
             override fun onSuccess(data: List<Band>) {
                 mBandsView.onLoadSuccess(data)
                 mBandsView.hideLoading()

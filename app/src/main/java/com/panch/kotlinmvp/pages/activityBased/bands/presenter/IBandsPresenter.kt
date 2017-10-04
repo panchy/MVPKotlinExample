@@ -8,6 +8,6 @@ import com.panch.kotlinmvp.pages.activityBased.bands.model.Band
  */
 abstract class IBandsPresenter : IBasePresenter() {
 
-    abstract fun showcaseList(): List<Band>
+    abstract fun bandsList(): List<Band>
 
 }

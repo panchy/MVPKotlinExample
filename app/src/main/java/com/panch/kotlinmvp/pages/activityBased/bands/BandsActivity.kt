@@ -3,7 +3,7 @@ package com.panch.kotlinmvp.pages.activityBased.bands
 import android.support.design.widget.Snackbar
 import android.support.v7.widget.GridLayoutManager
 import android.view.View
-import com.panch.kotlinmvp.base.BaseActivity
+import com.panch.kotlinmvp.base.MVPBaseActivity
 import com.panch.kotlinmvp.R
 import com.panch.kotlinmvp.adapter.AdapterItemListener
 import com.panch.kotlinmvp.adapter.BandsAdapter
@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_bands.*
 import kotlinx.android.synthetic.main.error_view.*
 import kotlinx.android.synthetic.main.loading_view.*
 
-class BandsActivity : BaseActivity<BandsPresenter>(), IBandsView, AdapterItemListener {
+class BandsActivity : MVPBaseActivity<BandsPresenter>(), IBandsView, AdapterItemListener {
 
     override fun getLayoutId(): Int {
         return R.layout.activity_bands
@@ -26,7 +26,7 @@ class BandsActivity : BaseActivity<BandsPresenter>(), IBandsView, AdapterItemLis
 
     override fun onItemClicked(pos: Int) {
 
-        val item = mPresenter.showcaseList()[pos]
+        val item = mPresenter.bandsList()[pos]
         showSnackbar(item.name)
 
     }
@@ -34,7 +34,7 @@ class BandsActivity : BaseActivity<BandsPresenter>(), IBandsView, AdapterItemLis
     override fun initView() {
         recyclerview_showcases.setHasFixedSize(true)
         recyclerview_showcases.layoutManager = GridLayoutManager(this, 2)
-        recyclerview_showcases.adapter = BandsAdapter(this, mPresenter.showcaseList(), this)
+        recyclerview_showcases.adapter = BandsAdapter(this, mPresenter.bandsList(), this)
 
         mPresenter.initViewData()
 

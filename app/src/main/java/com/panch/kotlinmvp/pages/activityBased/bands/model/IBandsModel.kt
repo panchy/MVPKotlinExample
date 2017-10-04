@@ -8,8 +8,8 @@ import com.panch.kotlinmvp.base.model.IBaseModel
  */
 interface IBandsModel : IBaseModel {
 
-    fun requestShowcaseList(callback: IBaseCallback<List<Band>>)
+    fun requestBandsList(callback: IBaseCallback<List<Band>>)
 
-    fun showcaseList(): List<Band>
+    fun bandsList(): List<Band>
 
 }

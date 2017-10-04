@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_layout"
+    android:padding="12dp"
+    tools:context="com.panch.kotlinmvp.pages.fragmentBased.profile.ProfileFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/avatarImageView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/nameSurnameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="#fff"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/nicknameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="#a3a3a3"
+            android:textSize="17sp" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/favoriteBandsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favorite Bands"
+            android:textColor="#fff"
+            app:backgroundTint="#005c99" />
+
+    </LinearLayout>
+
+    <include layout="@layout/loading_view" />
+
+    <include layout="@layout/error_view" />
+
+</FrameLayout>
