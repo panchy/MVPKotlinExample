@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:id="@+id/root_layout"
     android:padding="12dp"
-    tools:context="com.panch.kotlinmvp.pages.fragmentBased.profile.ProfileFragment">
+    tools:context="com.panch.kotlinmvp.pages.fragmentBased.profile.view.ProfileFragment">
 
 
     <LinearLayout

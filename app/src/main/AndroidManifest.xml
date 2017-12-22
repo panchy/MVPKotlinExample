@@ -17,7 +17,7 @@
             android:launchMode="singleTop" />
 
         <activity
-            android:name=".pages.fragmentBased.profile.ProfileActivity"
+            android:name=".pages.fragmentBased.profile.view.ProfileActivity"
             android:launchMode="singleTop">
 
             <intent-filter>

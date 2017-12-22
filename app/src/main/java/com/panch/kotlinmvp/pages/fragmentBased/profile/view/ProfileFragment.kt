@@ -1,4 +1,4 @@
-package com.panch.kotlinmvp.pages.fragmentBased.profile
+package com.panch.kotlinmvp.pages.fragmentBased.profile.view
 
 
 import android.content.Intent
@@ -10,7 +10,6 @@ import com.panch.kotlinmvp.base.MVPBaseFragment
 import com.panch.kotlinmvp.pages.activityBased.bands.BandsActivity
 import com.panch.kotlinmvp.pages.fragmentBased.profile.model.Profile
 import com.panch.kotlinmvp.pages.fragmentBased.profile.presenter.ProfilePresenter
-import com.panch.kotlinmvp.pages.fragmentBased.profile.view.IProfileView
 import kotlinx.android.synthetic.main.error_view.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.loading_view.*
